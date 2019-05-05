@@ -1,0 +1,6 @@
+
+# /platforms
+/node_modules
+
+!/www/dll
+!/www/bundle.js

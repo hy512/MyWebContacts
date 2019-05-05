@@ -1,0 +1,26 @@
+{
+  "name": "cordova-plugin-x-contacts",
+  "version": "0.0.1",
+  "description": "",
+  "cordova": {
+    "id": "cordova-plugin-x-contacts",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova-android",
+      "version": ">=4.0.0"
+    }
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cordova": "0.0.34"
+  }
+}

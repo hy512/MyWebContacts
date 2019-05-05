@@ -1,0 +1,18 @@
+{
+  "cordova-plugin-whitelist": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-whitelist@1"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-x-contacts": {
+    "source": {
+      "type": "local",
+      "path": "D:\\able\\work\\mobile\\Contacts\\node_modules\\cordova-plugin-x-contacts"
+    },
+    "is_top_level": true,
+    "variables": {}
+  }
+}

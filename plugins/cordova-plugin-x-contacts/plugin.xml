@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+	xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-x-contacts" version="0.0.1">
+	<name>Contacts</name>
+
+	<engines>
+		<engine name="cordova-android" version=">=4.0.0" />
+	</engines>
+
+	<js-module src="www/Contacts.js" name="Contacts">
+		<merges target="d_c.Contacts" />
+	</js-module>
+
+	<platform name="android">
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="Contacts">
+				<param name="android-package" value="example.contacts.cordova.xjlearn.Contacts" />
+				<param name="onload" value="true" />
+			</feature>
+		</config-file>
+		<config-file target="AndroidManifest.xml" parent="/*">
+			<uses-permission android:name="android.permission.READ_CONTACTS"/>
+			<uses-permission android:name="android.permission.WRITE_CONTACTS" />
+			<uses-permission android:name="android.permission.WRITE_SMS" />
+			<uses-permission android:name="android.permission.READ_SMS" />
+			<uses-permission android:name="android.permission.READ_CALL_LOG" />
+			<uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+			<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+			<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+		</config-file>
+		
+		<source-file src="android/src/main/java/example/contacts/cordova/xjlearn/Convenient.java" target-dir="src/example/contacts/cordova/xjlearn" />
+		<source-file src="android/src/main/java/example/contacts/cordova/xjlearn/Contacts.java" target-dir="src/example/contacts/cordova/xjlearn" />
+		<source-file src="android/src/main/java/example/contacts/cordova/xjlearn/reduce/ContactReduce.java" target-dir="src/example/contacts/cordova/xjlearn/reduce" />
+		<source-file src="android/src/main/java/example/contacts/cordova/xjlearn/reduce/IReduce.java" target-dir="src/example/contacts/cordova/xjlearn/reduce" />
+		<source-file src="android/src/main/java/example/contacts/cordova/xjlearn/service/ContactService.java" target-dir="src/example/contacts/cordova/xjlearn/service" />
+		<source-file src="android/src/main/java/example/contacts/cordova/xjlearn/service/IService.java" target-dir="src/example/contacts/cordova/xjlearn/service" />
+		<source-file src="android/src/main/java/example/contacts/cordova/xjlearn/exception/OperationNotSupportedException.java" target-dir="src/example/contacts/cordova/xjlearn/exception" />
+	</platform>
+
+	<platform name="browser">
+		<config-file target="config.xml" parent="/*">
+			<feature name="Contacts">
+				<param name="browser-package" value="Contacts" />
+			</feature>
+		</config-file>
+
+		<js-module src="browser/ContactsProxy.js" name="ContactsProxy">
+			<runs />
+		</js-module>
+	</platform>
+
+	<platform name="windows">
+		<js-module src="browser/ContactsProxy.js" name="ContactsProxy">
+			<runs />
+		</js-module>
+	</platform>
+
+</plugin>

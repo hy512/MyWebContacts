@@ -1,0 +1,49 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {
+      "config.xml": {
+        "parents": {
+          "/*": [
+            {
+              "xml": "<feature name=\"Contacts\"><param name=\"browser-package\" value=\"Contacts\" /></feature>",
+              "count": 1
+            }
+          ]
+        }
+      }
+    }
+  },
+  "installed_plugins": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "io.cordova.hellocordova"
+    },
+    "cordova-plugin-x-contacts": {
+      "PACKAGE_NAME": "io.cordova.hellocordova"
+    }
+  },
+  "dependent_plugins": {},
+  "modules": [
+    {
+      "file": "plugins/cordova-plugin-x-contacts/www/Contacts.js",
+      "id": "cordova-plugin-x-contacts.Contacts",
+      "pluginId": "cordova-plugin-x-contacts",
+      "merges": [
+        "d_c.Contacts"
+      ]
+    },
+    {
+      "file": "plugins/cordova-plugin-x-contacts/browser/ContactsProxy.js",
+      "id": "cordova-plugin-x-contacts.ContactsProxy",
+      "pluginId": "cordova-plugin-x-contacts",
+      "runs": true
+    }
+  ],
+  "plugin_metadata": {
+    "cordova-plugin-whitelist": "1.3.3",
+    "cordova-plugin-x-contacts": "0.0.1"
+  }
+}
